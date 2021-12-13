@@ -1,0 +1,45 @@
+<div class="main-banner">
+  <div class="banner-bg parallax-bg" style="background-image:url({{ section.settings.image | img_url: '1920x'}})"></div>
+  <div class="banner-caption">
+      {% if section.settings.logo_img != balnk %}
+      	<img src="{{ section.settings.logo_img | img_url:'600x'}}"/>
+      {% endif %}
+  </div>
+  {% if section.settings.link  != blank %}
+  	<a href="{{ section.settings.link }}" class="full-link"></a>
+  {% endif %}
+</div>
+{% schema %}
+  {
+    "name": "Home banner",
+    "settings": [
+		{
+			"type":"image_picker",
+			"id":"image",
+			"label":"banner image"
+		},
+		{
+			"type":"image_picker",
+			"id":"logo_img",
+			"label":"Logo image"
+		},
+		{
+			"type":"url",
+			"id":"link",
+			"label":"Banner link"
+		}
+	],
+	"presets":[
+		{
+			"name":"Home banner",
+			"category":"image"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

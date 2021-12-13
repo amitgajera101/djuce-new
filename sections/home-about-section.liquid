@@ -1,0 +1,39 @@
+<div class="home-about-section">
+  <div class="home-about-wrapper">
+    <div class="home-about-title">
+      <h2>{{ section.settings.title }}</h2>
+    </div>
+    <div class="home-about-text">
+      {{ section.settings.text }}
+    </div>
+  </div>	
+</div>
+{% schema %}
+  {
+    "name": "Home About",
+    "settings": [
+		{
+			"type":"text",
+			"id":"title",
+			"label":"section title"
+		},
+		{
+			"type":"richtext",
+			"id":"text",
+			"label":"section text"
+		}
+	],
+	"presets":[
+		{
+			"name":"Home About",
+			"category":"text"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
